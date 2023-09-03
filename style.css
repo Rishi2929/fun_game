@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?&family=Dangrek&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #8CC461;
+  font-family: 'Roboto';
+}
+
+.score-board-container {
+  width: 70%;
+  height: 9rem;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 0.8rem;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.inner-left {
+  color: #fff;
+  /* font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.20rem; */
+  margin-right: auto;
+}
+
+.inner-left > h1{
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.20rem;
+}
+
+.inner-right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.inner-right-box {
+  min-width: 8rem;
+  width: 20%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.inner-right-box:first-child {
+  margin-right: 1rem;
+}
+
+.inner-right-box h2 {
+  margin: 0 auto 0;
+  color: #656565;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.inner-right-box > div {
+  color: #252525;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* text-align: center; */
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/*****************************************
+  Triangle Container
+***************************************8**/
+
+.triangle-container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  row-gap: 4rem;
+  column-gap: 0rem;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.item-rock {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item-scissor {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item-paper {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.item-rock,
+.item-paper,
+.item-scissor {
+  display: flex;
+  align-items: center;
+}
+
+.item-rock > img+img,
+.item-paper > img+img{
+  margin-left: -120px;
+}
+
+.item-scissor > img+img {
+  margin-left: -100px;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  position: fixed;
+  /* top: 366px;
+  left: 540px; */
+  margin-top: 15rem;
+  margin-left: 2rem;
+  z-index: -1;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 196px solid transparent;
+  border-right: 196px solid transparent;
+  
+  border-top: 236px solid rgba(0, 0, 0, 0.64);;
+}
+
+.arrow-down2 {
+  width: 0; 
+  height: 0; 
+  border-left: 164px solid transparent;
+  border-right: 164px solid transparent;
+
+  border-top: 205px solid #8CC461;
+  position: absolute;
+  top:14px;
+  left: 32px;
+}
+
+/*****************************************
+  Result Area
+***************************************8**/
+
+.result-area-container {
+  margin-top: 5rem;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+
+.both-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.both-side h3 {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.result-middle {
+  margin-top: 6rem;
+}
+
+.result-middle h1,
+.result-middle h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+
+.result-middle h1 {
+  font-size: 2.5rem;
+}
+
+.result-middle h2 {
+  font-size: 1.5rem;
+}
+
+.play-again-btn {
+  margin-top: 1rem;
+  color: #6B6B6B;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  z-index: -1;
+  margin-top: -284px;
+  margin-left: -117px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: rgb(81 149 75 / 39%);
+}
+
+.circle1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background-color: rgba(56 147 48 / 39%);
+}
+
+.circle2 {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: rgb(53 122 47 / 39%);
+}
+
+/*****************************************
+  Rules Box
+***************************************8**/
+
+.hidden {
+  display: none;
+}
+
+.rules-box-container {
+  width: 25%;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  border: 0.44rem solid #FFF;
+  border-radius: 0.8125rem;
+  color: #fff;
+  background: #004429;
+  text-align: center;
+
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+}
+
+.rules-box-container h3{
+  margin-bottom: 1.75rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.rules-box-container ul {
+  list-style-type: square;
+  padding-left: 1rem;
+  text-align: left;
+  list-style-image: yellow;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.rules-box-container li::marker {
+  font-size: 1.5rem;
+  color: #FFD600;
+}
+
+.rules-box-container li {
+  margin-bottom: 1rem;
+}
+
+.rules-box-container li:last-child {
+  margin-bottom: 0;
+}
+
+.rules-box-wrapper {
+  position: relative;
+}
+
+.rule-close-btn {
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  color: #fff;
+  background-color: #f00;
+  border: 0.33rem solid #fff;
+  border-radius: 50%;
+  font-size: 23px;
+  font-family: "Dangrek";
+  padding: 0 10px;
+}
+
+/*****************************************
+  Both Buttons
+***************************************8**/
+
+.both-btns-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: end;
+}
+
+.rules-btn {
+  padding: 0.5rem 1rem;
+  margin-right: 2rem;
+  border-radius: 0.625rem;
+  border: 2px solid #FFF;
+  color: #fff;
+  background: #89C15E;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.13rem;
+}
+
+.rules-btn + .rules-btn {
+  padding: 0.5rem 1.6rem;
+}
+
+.rules-box {
+  margin-left: auto;
+}
+
+/*****************************************
+  Congratulations
+***************************************8**/
+
+.congratulations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.congratulations-container h1 {
+  font-size: 6rem;
+  letter-spacing: 0.5rem;
+}
+
+.congratulations-container p {
+  font-size: 2.6rem;
+  letter-spacing: 0.25rem;
+}
+
+.congratulations-container .final-play-again-btn {
+  margin-top: 4rem;
+}
+
+.star-container {
+  display: grid;
+  grid-template-rows: repeat(3, 8rem);
+  grid-template-columns: repeat(5, 8rem);
+  margin-right: 6rem
+}
+
+.star4 {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+  align-self: center;
+  width: 2rem;
+}
+
+.star5 {
+  grid-row: 1;
+  grid-column: 3;
+  justify-self: center;
+  align-self: center;
+  margin-top: 2rem;
+  width: 2rem;
+}
+
+.star2 {
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 4;
+  justify-self: start;
+  align-self: end;
+  margin-left: 2rem;
+  /* width: 6rem; */
+}
+
+.star7 {
+  grid-row: 1;
+  grid-column: 5;
+  justify-self: center;
+  align-self: end;
+  margin-right: 3rem;
+  width: 2rem;
+}
+
+.star9 {
+  display: grid;
+  grid-row: 1/3;
+  grid-column: 2/3;
+  justify-self: center;
+  align-self: center;
+  /* width: 4.25rem; */
+}
+
+.star1 {
+  display: grid;
+  grid-row: 2;
+  grid-column: 1/3;
+  justify-self: center;
+  /* width: 2rem; */
+}
+
+.star8 {
+  display: grid;
+  grid-row: 3;
+  grid-column: 2/3;
+  justify-self: end;
+  align-self: center;
+  width: 2rem;
+}
+
+.star6 {
+  display: grid;
+  grid-row: 2/4;
+  grid-column: 4/6;
+  justify-self: center;
+  align-self: center;
+  /* width: 2rem; */
+}
+
+.victor {
+  grid-row: 2/3;
+  grid-column: 3;
+  /* width: 2rem; */
+}
+
+
